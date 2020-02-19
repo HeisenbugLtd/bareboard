@@ -2,7 +2,6 @@ Forked from the original AdaCore bareboard repository, this project is to
 become a SPARK based implementation targeted at the STM32F4xx family for use
 within the AdaPilot http://adapilot.likeabird.eu project.
 
-=======
 # 1. Introduction
 
 This repository contains drivers and sample projects to program
@@ -20,7 +19,7 @@ use.
 
 For details, see the "License" section in the release notes accompanying the
 HAL drivers provided by ST Microelectronics.
-=======
+
 Ada_Drivers_Library provides support for various devices in the ARM Cortex-M
 and RISC-V architectures. Some devices are only partially supported. Go to the
 [boards directory](boards/) for a list of supported hardware.
