@@ -1,6 +1,6 @@
-[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/ada-lang/Ada_Drivers_Library)
-[![Linux Build Status](https://travis-ci.org/AdaCore/Ada_Drivers_Library.svg?branch=master)](https://travis-ci.org/AdaCore/Ada_Drivers_Library)
-[![Windows Build status](https://ci.appveyor.com/api/projects/status/github/AdaCore/Ada_Drivers_Library?branch=master&svg=true)](https://ci.appveyor.com/project/github-integration-adacore/ada-drivers-library)
+Forked from the original AdaCore bareboard repository, this project is to
+become a SPARK based implementation targeted at the STM32F4xx family for use
+within the AdaPilot http://adapilot.likeabird.eu project.
 
 # 1. Introduction
 
@@ -11,6 +11,14 @@ intend this to be a location for both AdaCore and the community in general to
 contribute support for additional processors, platforms, and vendors.
 
 # 2. Supported hardware
+
+All files are provided under a non-restrictive Berkeley Software Distribution
+(BSD) license.  As such, and within the conditions required by the license, the
+files are available both for proprietary ("commercial") and non-proprietary
+use.
+
+For details, see the "License" section in the release notes accompanying the
+HAL drivers provided by ST Microelectronics.
 
 Ada_Drivers_Library provides support for various devices in the ARM Cortex-M
 and RISC-V architectures. Some devices are only partially supported. Go to the
@@ -32,8 +40,10 @@ For details, see the `LICENSE` file in the root directory.
 
 # 5. Requirements
 
-The software is written in Ada 2012 and uses, for example, preconditions,
-postconditions, and the high-level iterator form of for-loops.
+The software is written in SPARK 2014 (aimed at SPARK 2016 with Ravenscar
+profile enabled) and as such uses preconditions, postconditions, and other
+SPARK specific aspects like "Depends" for data flow analysis, and the
+high-level iterator form of for-loops.
 
 In addition, a GNAT implementation-defined pragma is used extensively. This
 pragma makes it possible to avoid explicit temporary copies when assigning
@@ -43,9 +53,9 @@ wishing to submit additions to the library should see the GNAT Reference Manual
 for details.
 
 Therefore, building with the sources requires a compiler supporting both Ada
-2012 and the GNAT-defined pragma `Volatile_Full_Access`. For instance a recent
-GNAT Pro compiler or GNAT Community 2018 for ARM ELF or RISC-V ELF [(Download
-here)](http://adacore.com/download).
+2012, SPARK 2014 aspects, and the GNAT-defined pragma `Volatile_Full_Access`.
+For instance a recent GNAT Pro compiler or GNAT Community 2018 for ARM ELF or
+RISC-V ELF [(Download here)](http://adacore.com/download).
 
 # 6. Roadmap
 
@@ -80,4 +90,3 @@ https://github.com/AdaCore/Lunar_Lander_Rotation_Demo)
  * [RC Car: A remotely-controlled car built without the NXT Brick, written completely in Ada and SPARK](https://github.com/AdaCore/RC_Car_Demo)
 
 (Add yours to the list!)
-
